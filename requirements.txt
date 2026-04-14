@@ -1,0 +1,14 @@
+flask
+werkzeug
+pandas
+numpy
+scikit-learn
+xgboost
+joblib
+requests
+spacy
+sentence-transformers
+PyMuPDF
+pytesseract
+pdfplumber
+Pillow
