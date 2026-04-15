@@ -20,7 +20,8 @@ load_dotenv()
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 GITHUB_API = "https://api.github.com"
 
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_sm", disable=["parser","ner","lemmatizer"])
+nlp.add_pipe("sentencizer")
 # Use a lightweight but good model (~80-100 MB RAM usage)
 embedder = SentenceTransformer("all-MiniLM-L6-v2")
 
